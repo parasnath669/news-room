@@ -1,0 +1,4 @@
+the-newsroom/
+├── index.html
+├── style.css
+└── script.js

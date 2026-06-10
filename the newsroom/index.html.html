@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="THE NEWSROOM - जनता का न्यूज़रूम, जनता की आवाज़। भारत और दुनिया की हर बड़ी खबर।"/>
+  <meta name="keywords" content="Hindi News, Breaking News, India News, THE NEWSROOM, ताज़ा खबर"/>
+  <meta property="og:title" content="THE NEWSROOM – जनता की आवाज़"/>
+  <meta property="og:description" content="भारत और दुनिया की हर बड़ी खबर, सबसे तेज़ और सबसे भरोसेमंद अंदाज़ में"/>
+  <meta property="og:type" content="website"/>
+  <title>THE NEWSROOM | जनता का न्यूज़रूम, जनता की आवाज़</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== BREAKING NEWS TICKER ===== -->
+  <div class="breaking-ticker">
+    <span class="ticker-label"><i class="fas fa-bolt"></i> BREAKING</span>
+    <div class="ticker-wrapper">
+      <div class="ticker-content" id="tickerContent">
+        <span>🔴 संसद में आज बड़ा हंगामा, विपक्ष ने किया वॉकआउट &nbsp;|&nbsp;</span>
+        <span>🔴 मध्यप्रदेश में भारी बारिश का अलर्ट, 10 जिले प्रभावित &nbsp;|&nbsp;</span>
+        <span>🔴 शेयर बाज़ार में तेज़ी, सेंसेक्स 500 अंक उछला &nbsp;|&nbsp;</span>
+        <span>🔴 भारत-पाक सीमा पर हाई अलर्ट जारी &nbsp;|&nbsp;</span>
+        <span>🔴 ICC World Cup 2025: टीम इंडिया का फाइनल में प्रवेश &nbsp;|&nbsp;</span>
+        <span>🔴 AI तकनीक से बदलेगी देश की शिक्षा प्रणाली - PM मोदी &nbsp;|&nbsp;</span>
+      </div>
+    </div>
+    <button class="ticker-close" onclick="document.querySelector('.breaking-ticker').style.display='none'">✕</button>
+  </div>
+
+  <!-- ===== STICKY HEADER ===== -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-inner container">
+
+      <!-- Logo -->
+      <div class="header-logo">
+        <a href="index.html">
+          <div class="logo-box">
+            <div class="logo-news">NEWS</div>
+            <div class="logo-room">R<span class="logo-o">O</span><span class="logo-o">O</span>M</div>
+          </div>
+          <span class="logo-tagline">जनता की आवाज़</span>
+        </a>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <form class="search-form" onsubmit="return false;">
+          <input type="text" placeholder="खबर खोजें..." class="search-input" id="searchInput"/>
+          <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" title="Dark/Light Mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#" class="live-tv-btn"><i class="fas fa-circle live-dot"></i> LIVE TV</a>
+        <a href="#" class="btn-login">Login</a>
+        <a href="#" class="btn-signup">Sign Up</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container">
+      <ul class="nav-list" id="navList">
+        <li><a href="#" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#" class="nav-link"><i class="fas fa-bolt"></i> Latest</a></li>
+        <li><a href="#" class="nav-link">🇮🇳 India</a></li>
+        <li><a href="#" class="nav-link">🏛️ Politics</a></li>
+        <li><a href="#" class="nav-link">🌍 World</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link">📍 MP <i class="fas fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">भोपाल</a></li>
+            <li><a href="#">इंदौर</a></li>
+            <li><a href="#">जबलपुर</a></li>
+            <li><a href="#">ग्वालियर</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link">💼 Business</a></li>
+        <li><a href="#" class="nav-link">💻 Tech</a></li>
+        <li><a href="#" class="nav-link">📚 Education</a></li>
+        <li><a href="#" class="nav-link">🏏 Sports</a></li>
+        <li><a href="#" class="nav-link">🎬 Entertainment</a></li>
+        <li><a href="#" class="nav-link fact-link">✅ Fact Check</a></li>
+        <li><a href="#" class="nav-link">✍️ Opinion</a></li>
+        <li><a href="#" class="nav-link">🔍 Explainers</a></li>
+        <li><a href="#" class="nav-link">🎥 Videos</a></li>
+        <li><a href="#" class="nav-link">🎙️ Podcasts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section container">
+      <div class="hero-grid">
+
+        <!-- Featured Breaking Story -->
+        <div class="hero-featured">
+          <div class="news-card hero-card">
+            <div class="card-badge breaking">🔴 BREAKING</div>
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" alt="Breaking News" class="card-img hero-img" loading="lazy"/>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-tag politics">राजनीति</span>
+                <span class="read-time"><i class="far fa-clock"></i> 4 मिनट</span>
+                <span class="publish-time">2 घंटे पहले</span>
+              </div>
+              <h1 class="card-title hero-title">संसद का मानसून सत्र: विपक्ष का जोरदार हमला, सरकार पर लगाए गंभीर आरोप – देश भर में हलचल</h1>
+              <p class="card-excerpt">आज संसद के मानसून सत्र में विपक्षी दलों ने सरकार के खिलाफ मोर्चा खोल दिया। लोकसभा में जमकर हंगामा हुआ और कई सांसदों ने वॉकआउट किया...</p>
+              <div class="card-footer">
+                <span class="author"><i class="fas fa-user-circle"></i> राहुल वर्मा, वरिष्ठ संवाददाता</span>
+                <div class="card-actions">
+                  <button class="action-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+                  <button class="action-btn" title="Bookmark"><i class="far fa-bookmark"></i></button>
+                  <a href="#" class="read-more-btn">पूरी खबर पढ़ें →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="hero-sidebar">
+
+          <!-- Top Stories Slider -->
+          <div class="top-stories-panel">
+            <div class="panel-header">
+              <h3><i class="fas fa-fire"></i> Top Stories</h3>
+              <span class="panel-badge">LIVE</span>
+            </div>
+            <div class="stories-list" id="storiesList">
+              <div class="story-item active">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=100&q=80" alt="" class="story-thumb"/>
+                <div class="story-info">
+                  <span class="story-cat sports">🏏 खेल</span>
+                  <p class="story-title">टीम इंडिया ने रचा इतिहास, फाइनल में पहुंची</p>
+                  <span class="story-time">1 घंटे पहले</span>
+                </div>
+              </div>
+              <div class="story-item">
+                <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=100&q=80" alt="" class="story-thumb"/>
+                <div class="story-info">
+                  <span class="story-cat tech">💻 टेक</span>
+                  <p class="story-title">Jio का नया 5G प्लान लॉन्च, कीमत जानकर हैरान रह जाएंगे</p>
+                  <span class="story-time">3 घंटे पहले</span>
+                </div>
+              </div>
+              <div class="story-item">
+                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=100&q=80" alt="" class="story-thumb"/>
+                <div class="story-info">
+                  <span class="story-cat business">💼 बिज़नेस</span>
+                  <p class="story-title">सेंसेक्स 80,000 के पार, निवेशकों में खुशी की लहर</p>
+                  <span class="story-time">5 घंटे पहले</span>
+                </div>
+              </div>
+              <div class="story-item">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=100&q=80" alt="" class="story-thumb"/>
+                <div class="story-info">
+                  <span class="story-cat education">📚 शिक्षा</span>
+                  <p class="story-title">CBSE Result 2025: 10वीं-12वीं के नतीजे घोषित</p>
+                  <span class="story-time">6 घंटे पहले</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Updates Widget -->
+          <div class="live-updates-widget">
+            <div class="panel-header">
+              <h3><i class="fas fa-circle live-dot"></i> Live Updates</h3>
+              <span class="update-count" id="updateCount">12 अपडेट</span>
+            </div>
+            <div class="live-feed" id="liveFeed">
+              <div class="live-item new">
+                <span class="live-time">12:45 PM</span>
+                <p>PM मोदी ने नई दिल्ली में आर्थिक सलाहकार परिषद की बैठक की अध्यक्षता की</p>
+              </div>
+              <div class="live-item">
+                <span class="live-time">12:30 PM</span>
+                <p>सुप्रीम कोर्ट ने चुनावी बॉन्ड मामले में सरकार से मांगा जवाब</p>
+              </div>
+              <div class="live-item">
+                <span class="live-time">12:15 PM</span>
+                <p>मुंबई: भारी बारिश से जलभराव, लोकल ट्रेन सेवा प्रभावित</p>
+              </div>
+              <div class="live-item">
+                <span class="live-time">11:50 AM</span>
+                <p>RBI ने रेपो रेट में कोई बदलाव नहीं किया – गवर्नर शक्तिकांत दास</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AD BANNER ===== -->
+    <div class="ad-banner container">
+      <div class="ad-placeholder">
+        <span>📢 Advertisement</span>
+        <p>Your Ad Here – Premium Placement</p>
+      </div>
+    </div>
+
+    <!-- ===== TRENDING SECTION ===== -->
+    <section class="trending-section container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-chart-line"></i> ट्रेंडिंग</h2>
+        <div class="trend-tabs">
+          <button class="trend-tab active" onclick="switchTab(this, 'most-read')">Most Read</button>
+          <button class="trend-tab" onclick="switchTab(this, 'most-shared')">Most Shared</button>
+          <button class="trend-tab" onclick="switchTab(this, 'viral')">🔥 Viral</button>
+        </div>
+      </div>
+
+      <div class="trending-grid" id="trendingGrid">
+        <!-- Trending Card 1 -->
+        <div class="trend-card">
+          <span class="trend-number">01</span>
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&q=80" alt="" class="trend-img" loading="lazy"/>
+          <div class="trend-info">
+            <span class="category-tag sports">खेल</span>
+            <h4>भारत ने ऑस्ट्रेलिया को 6 विकेट से हराया, सीरीज़ 3-1 से जीती</h4>
+            <div class="trend-meta">
+              <span><i class="fas fa-eye"></i> 2.4M</span>
+              <span><i class="fas fa-share"></i> 48K</span>
+              <span><i class="far fa-clock"></i> 3 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trending Card 2 -->
+        <div class="trend-card">
+          <span class="trend-number">02</span>
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=300&q=80" alt="" class="trend-img" loading="lazy"/>
+          <div class="trend-info">
+            <span class="category-tag tech">टेक</span>
+            <h4>ChatGPT का नया वर्ज़न लॉन्च: अब हिंदी में भी करेगा बेहतर काम</h4>
+            <div class="trend-meta">
+              <span><i class="fas fa-eye"></i> 1.9M</span>
+              <span><i class="fas fa-share"></i> 31K</span>
+              <span><i class="far fa-clock"></i> 5 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trending Card 3 -->
+        <div class="trend-card">
+          <span class="trend-number">03</span>
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&q=80" alt="" class="trend-img" loading="lazy"/>
+          <div class="trend-info">
+            <span class="category-tag politics">राजनीति</span>
+            <h4>2025 चुनाव: किस पार्टी को मिलेगा जनता का साथ? सर्वे में चौंकाने वाला खुलासा</h4>
+            <div class="trend-meta">
+              <span><i class="fas fa-eye"></i> 3.1M</span>
+              <span><i class="fas fa-share"></i> 67K</span>
+              <span><i class="far fa-clock"></i> 6 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trending Card 4 -->
+        <div class="trend-card">
+          <span class="trend-number">04</span>
+          <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=300&q=80" alt="" class="trend-img" loading="lazy"/>
+          <div class="trend-info">
+            <span class="category-tag business">बिज़नेस</span>
+            <h4>Adani Group ने किया 50,000 करोड़ का नया निवेश, रोज़गार के बनेंगे लाखों अवसर</h4>
+            <div class="trend-meta">
+              <span><i class="fas fa-eye"></i> 1.2M</span>
+              <span><i class="fas fa-share"></i> 22K</span>
+              <span><i class="far fa-clock"></i> 4 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORY SECTIONS ===== -->
+
+    <!-- Politics Category -->
+    <section class="category-section container" id="politics">
+      <div class="section-header">
+        <h2 class="section-title cat-politics"><i class="fas fa-landmark"></i> राजनीति</h2>
+        <a href="#" class="see-all">सभी खबरें →</a>
+      </div>
+      <div class="category-grid">
+        <div class="cat-featured">
+          <div class="news-card">
+            <div class="card-badge">Featured</div>
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=80" alt="" class="card-img" loading="lazy"/>
+            <div class="card-body">
+              <span class="category-tag politics">राजनीति</span>
+              <h3 class="card-title">BJP की राष्ट्रीय कार्यकारिणी बैठक आज, 2025-26 की रणनीति पर होगी चर्चा</h3>
+              <p class="card-excerpt">पार्टी के वरिष्ठ नेता और केंद्रीय मंत्री इस महत्वपूर्ण बैठक में शामिल होंगे।</p>
+              <div class="card-footer">
+                <span class="author"><i class="fas fa-user-circle"></i> अनुराग मिश्रा</span>
+                <span class="read-time"><i class="far fa-clock"></i> 5 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cat-secondary-grid">
+          <div class="news-card mini-card" onclick="openArticle(this)">
+            <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>कांग्रेस का नया अभियान: 'जनता की बात' यात्रा शुरू</h4>
+              <div class="card-footer"><span class="read-time">3 min</span><span class="author-small">सीमा तिवारी</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card" onclick="openArticle(this)">
+            <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>AAP की दिल्ली रैली में उमड़ी भीड़, केजरीवाल ने साधा निशाना</h4>
+              <div class="card-footer"><span class="read-time">4 min</span><span class="author-small">विकास पांडे</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card" onclick="openArticle(this)">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>राज्यसभा में पास हुआ नया बिल, विपक्ष ने जताई आपत्ति</h4>
+              <div class="card-footer"><span class="read-time">6 min</span><span class="author-small">प्रिया शर्मा</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card" onclick="openArticle(this)">
+            <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>UP में आगामी निकाय चुनाव की तैयारी शुरू, इन सीटों पर नज़र</h4>
+              <div class="card-footer"><span class="read-time">5 min</span><span class="author-small">अमित राय</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sports Category -->
+    <section class="category-section container" id="sports">
+      <div class="section-header">
+        <h2 class="section-title cat-sports"><i class="fas fa-trophy"></i> खेल</h2>
+        <a href="#" class="see-all">सभी खबरें →</a>
+      </div>
+      <div class="category-grid">
+        <div class="cat-featured">
+          <div class="news-card">
+            <div class="card-badge">Featured</div>
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="" class="card-img" loading="lazy"/>
+            <div class="card-body">
+              <span class="category-tag sports">खेल</span>
+              <h3 class="card-title">ICC World Cup Final: भारत vs इंग्लैंड – कल होगा महामुकाबला, जानें कब और कहाँ देखें</h3>
+              <p class="card-excerpt">मुंबई के वानखेड़े स्टेडियम में कल होने वाले फाइनल मैच के लिए पूरा देश उत्साहित है।</p>
+              <div class="card-footer">
+                <span class="author"><i class="fas fa-user-circle"></i> रोहन गुप्ता</span>
+                <span class="read-time"><i class="far fa-clock"></i> 7 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cat-secondary-grid">
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>विराट कोहली ने तोड़ा सचिन का ये बड़ा रिकॉर्ड</h4>
+              <div class="card-footer"><span class="read-time">3 min</span><span class="author-small">संजय मेहता</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1570498839593-e565b39455fc?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>Paris Olympics 2025: भारत के पदक विजेताओं की लिस्ट</h4>
+              <div class="card-footer"><span class="read-time">4 min</span><span class="author-small">नेहा सिंह</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>IPL 2025 Auction: इस खिलाड़ी को मिली सबसे बड़ी बोली</h4>
+              <div class="card-footer"><span class="read-time">5 min</span><span class="author-small">राज कपूर</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>फुटबॉल: मनोज तिवारी बने भारतीय टीम के कप्तान</h4>
+              <div class="card-footer"><span class="read-time">2 min</span><span class="author-small">दीपक जोशी</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Category -->
+    <section class="category-section container" id="technology">
+      <div class="section-header">
+        <h2 class="section-title cat-tech"><i class="fas fa-microchip"></i> टेक्नोलॉजी</h2>
+        <a href="#" class="see-all">सभी खबरें →</a>
+      </div>
+      <div class="category-grid">
+        <div class="cat-featured">
+          <div class="news-card">
+            <div class="card-badge">Featured</div>
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="" class="card-img" loading="lazy"/>
+            <div class="card-body">
+              <span class="category-tag tech">टेक</span>
+              <h3 class="card-title">भारत का पहला Quantum Computer तैयार: IIT बॉम्बे की ऐतिहासिक उपलब्धि</h3>
+              <p class="card-excerpt">भारतीय वैज्ञानिकों ने एक बड़ी उपलब्धि हासिल करते हुए देश का पहला क्वांटम कंप्यूटर विकसित किया है।</p>
+              <div class="card-footer">
+                <span class="author"><i class="fas fa-user-circle"></i> तकनीकी संवाददाता</span>
+                <span class="read-time"><i class="far fa-clock"></i> 8 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cat-secondary-grid">
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>iPhone 17 की कीमत और फीचर्स लीक, जानें क्या है खास</h4>
+              <div class="card-footer"><span class="read-time">4 min</span><span class="author-small">रवि शंकर</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>ISRO का नया मिशन: चाँद की सतह से लाएगा मिट्टी</h4>
+              <div class="card-footer"><span class="read-time">6 min</span><span class="author-small">अंशु मालवीय</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>5G नेटवर्क से अब गांवों में भी हाई-स्पीड इंटरनेट</h4>
+              <div class="card-footer"><span class="read-time">3 min</span><span class="author-small">मेघना त्रिपाठी</span></div>
+            </div>
+          </div>
+          <div class="news-card mini-card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&q=80" alt="" class="mini-img" loading="lazy"/>
+            <div class="card-body">
+              <h4>Google का नया AI Tool: एक क्लिक में बनाएगा पूरी वेबसाइट</h4>
+              <div class="card-footer"><span class="read-time">5 min</span><span class="author-small">हर्षित वर्मा</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIDEO NEWS SECTION ===== -->
+    <section class="video-section container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fab fa-youtube" style="color:#FF0000"></i> वीडियो न्यूज़</h2>
+        <a href="#" class="see-all">सभी वीडियो →</a>
+      </div>
+      <div class="video-grid">
+        <div class="video-card featured-video">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80" alt="Video" loading="lazy"/>
+            <div class="play-overlay">
+              <button class="play-btn" onclick="playVideo(this)"><i class="fas fa-play"></i></button>
+            </div>
+            <span class="video-duration">15:42</span>
+            <span class="video-badge live-badge"><i class="fas fa-circle"></i> LIVE</span>
+          </div>
+          <div class="video-info">
+            <h3>LIVE: संसद की कार्यवाही – मानसून सत्र 2025 का सीधा प्रसारण</h3>
+            <span class="video-views"><i class="fas fa-eye"></i> 45,230 देख रहे हैं</span>
+          </div>
+        </div>
+        <div class="video-list">
+          <div class="video-item">
+            <div class="video-thumb-small">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=200&q=80" alt="" loading="lazy"/>
+              <span class="video-duration-small">08:25</span>
+            </div>
+            <div class="video-item-info">
+              <h4>World Cup Final Preview: जानें कौन जीतेगा</h4>
+              <span><i class="fas fa-eye"></i> 1.2M views</span>
+            </div>
+          </div>
+          <div class="video-item">
+            <div class="video-thumb-small">
+              <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=200&q=80" alt="" loading="lazy"/>
+              <span class="video-duration-small">12:10</span>
+            </div>
+            <div class="video-item-info">
+              <h4>AI की दुनिया में भारत की छलांग – पूरी रिपोर्ट</h4>
+              <span><i class="fas fa-eye"></i> 890K views</span>
+            </div>
+          </div>
+          <div class="video-item">
+            <div class="video-thumb-small">
+              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=200&q=80" alt="" loading="lazy"/>
+              <span class="video-duration-small">06:55</span>
+            </div>
+            <div class="video-item-info">
+              <h4>बजट 2025: आम आदमी को क्या मिला?</h4>
+              <span><i class="fas fa-eye"></i> 2.1M views</span>
+            </div>
+          </div>
+          <div class="video-item">
+            <div class="video-thumb-small">
+              <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=200&q=80" alt="" loading="lazy"/>
+              <span class="video-duration-small">09:30</span>
+            </div>
+            <div class="video-item-info">
+              <h4>MP में शिक्षा क्रांति: CM शिवराज की बड़ी योजना</h4>
+              <span><i class="fas fa-eye"></i> 560K views</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPLAINER SECTION ===== -->
+    <section class="explainer-section container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-search-plus"></i> Explainers</h2>
+        <a href="#" class="see-all">सभी Explainers →</a>
+      </div>
+      <div class="explainer-grid">
+        <div class="explainer-card">
+          <div class="explainer-icon">🔍</div>
+          <img src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?w=400&q=80" alt="" loading="lazy"/>
+          <div class="explainer-body">
+            <span class="explainer-tag">DEEP DIVE</span>
+            <h3>UCC क्या है? Uniform Civil Code को समझिए आसान भाषा में</h3>
+            <p>10 मिनट में समझें वो सब कुछ जो आपको UCC के बारे में जानना चाहिए...</p>
+            <div class="explainer-meta">
+              <span><i class="far fa-clock"></i> 10 min read</span>
+              <span><i class="fas fa-eye"></i> 5.6M reads</span>
+            </div>
+          </div>
+        </div>
+        <div class="explainer-card">
+          <div class="explainer-icon">📊</div>
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80" alt="" loading="lazy"/>
+          <div class="explainer-body">
+            <span class="explainer-tag">TIMELINE</span>
+            <h3>भारत-पाक रिश्तों का 75 साल का इतिहास: Timeline में समझें</h3>
+            <p>1947 से 2025 तक के सबसे अहम मोड़ जिन्होंने दोनों देशों के रिश्ते बदले...</p>
+            <div class="explainer-meta">
+              <span><i class="far fa-clock"></i> 15 min read</span>
+              <span><i class="fas fa-eye"></i> 8.2M reads</span>
+            </div>
+          </div>
+        </div>
+        <div class="explainer-card">
+          <div class="explainer-icon">📈</div>
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80" alt="" loading="lazy"/>
+          <div class="explainer-body">
+            <span class="explainer-tag">INFOGRAPHIC</span>
+            <h3>शेयर बाज़ार कैसे काम करता है? Beginners के लिए पूरी Guide</h3>
+            <p>Sensex, Nifty, Bull & Bear Market – सब कुछ इन्फोग्राफिक के साथ समझें...</p>
+            <div class="explainer-meta">
+              <span><i class="far fa-clock"></i> 8 min read</span>
+              <span><i class="fas fa-eye"></i> 3.9M reads</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FACT CHECK SECTION ===== -->
+    <section class="factcheck-section container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-check-double"></i> Fact Check</h2>
+        <a href="#" class="see-all">सभी Fact Checks →</a>
+      </div>
+      <div class="factcheck-grid">
+        <div class="factcheck-card">
+          <div class="fact-verdict true"><i class="fas fa-check-circle"></i> सच</div>
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&q=80" alt="" loading="lazy"/>
+          <div class="fact-body">
+            <p class="fact-claim">Claim: "भारत में 2025 में GDP ग्रोथ 7.2% रहेगी"</p>
+            <p class="fact-result">✅ यह दावा सही है। IMF और World Bank दोनों ने इसकी पुष्टि की है।</p>
+            <a href="#" class="fact-source">स्रोत देखें →</a>
+          </div>
+        </div>
+        <div class="factcheck-card">
+          <div class="fact-verdict false"><i class="fas fa-times-circle"></i> झूठ</div>
+          <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?w=400&q=80" alt="" loading="lazy"/>
+          <div class="fact-body">
+            <p class="fact-claim">Claim: "सरकार मुफ्त में दे रही है 10 लाख रुपये – Viral Message"</p>
+            <p class="fact-result">❌ यह दावा पूरी तरह झूठा और भ्रामक है। PIB ने इसे फर्जी करार दिया।</p>
+            <a href="#" class="fact-source">स्रोत देखें →</a>
+          </div>
+        </div>
+        <div class="factcheck-card">
+          <div class="fact-verdict partial"><i class="fas fa-exclamation-circle"></i> आंशिक सच</div>
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&q=80" alt="" loading="lazy"/>
+          <div class="fact-body">
+            <p class="fact-claim">Claim: "नई शिक्षा नीति से खत्म होगी 10वीं बोर्ड परीक्षा"</p>
+            <p class="fact-result">⚠️ यह आंशिक सच है। बोर्ड परीक्षाएं होंगी लेकिन पैटर्न बदलेगा।</p>
+            <a href="#" class="fact-source">स्रोत देखें →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OPINION SECTION ===== -->
+    <section class="opinion-section container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-pen-fancy"></i> Opinion & Editorial</h2>
+        <a href="#" class="see-all">सभी Opinion →</a>
+      </div>
+      <div class="opinion-grid">
+        <div class="opinion-card">
+          <div class="opinion-author-info">
+            <div class="opinion-avatar">RV</div>
+            <div>
+              <strong>राहुल वर्मा</strong>
+              <span>वरिष्ठ संपादक</span>
+            </div>
+          </div>
+          <h3>"2025 का भारत: लोकतंत्र की असली परीक्षा अभी बाकी है"</h3>
+          <p>जब हम आज़ादी के 78 साल मना रहे हैं, तो यह सोचने का वक्त है कि हमारा लोकतंत्र कहाँ खड़ा है...</p>
+          <a href="#" class="read-more-opinion">पूरा लेख →</a>
+        </div>
+        <div class="opinion-card">
+          <div class="opinion-author-info">
+            <div class="opinion-avatar">PS</div>
+            <div>
+              <strong>प्रिया शर्मा</strong>
+              <span>आर्थिक विश्लेषक</span>
+            </div>
+          </div>
+          <h3>"भारतीय अर्थव्यवस्था की उड़ान: अवसर भी, चुनौती भी"</h3>
+          <p>GDP के आंकड़े भले ही उत्साहजनक हों, लेकिन असली सवाल यह है कि यह विकास किस तक पहुँच रहा है...</p>
+          <a href="#" class="read-more-opinion">पूरा लेख →</a>
+        </div>
+        <div class="opinion-card">
+          <div class="opinion-author-info">
+            <div class="opinion-avatar">AK</div>
+            <div>
+              <strong>अमित कुमार</strong>
+              <span>Guest Writer</span>
+            </div>
+          </div>
+          <h3>"AI और नौकरी: डर नहीं, तैयारी करें"</h3>
+          <p>Artificial Intelligence नौकरियाँ छीनेगी या बनाएगी? दोनों सवालों का एक ईमानदार जवाब...</p>
+          <a href="#" class="read-more-opinion">पूरा लेख →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POLL SECTION ===== -->
+    <section class="poll-section container">
+      <div class="poll-widget">
+        <h3><i class="fas fa-poll"></i> आज का सवाल</h3>
+        <p class="poll-question">क्या आप मानते हैं कि भारत 2047 तक विकसित राष्ट्र बन जाएगा?</p>
+        <div class="poll-options" id="pollOptions">
+          <button class="poll-option" onclick="votePoll(this, 68)">
+            <span class="poll-text">✅ हाँ, ज़रूर</span>
+            <div class="poll-bar"><div class="poll-fill" style="width:0%"></div></div>
+            <span class="poll-percent">68%</span>
+          </button>
+          <button class="poll-option" onclick="votePoll(this, 22)">
+            <span class="poll-text">❌ नहीं</span>
+            <div class="poll-bar"><div class="poll-fill" style="width:0%"></div></div>
+            <span class="poll-percent">22%</span>
+          </button>
+          <button class="poll-option" onclick="votePoll(this, 10)">
+            <span class="poll-text">🤔 कह नहीं सकते</span>
+            <div class="poll-bar"><div class="poll-fill" style="width:0%"></div></div>
+            <span class="poll-percent">10%</span>
+          </button>
+        </div>
+        <p class="poll-total">📊 कुल वोट: <span id="totalVotes">1,24,567</span></p>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER SECTION ===== -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-inner">
+          <div class="newsletter-text">
+            <h2><i class="fas fa-newspaper"></i> Daily News Digest</h2>
+            <p>रोज़ सुबह 7 बजे – दिन की 10 सबसे ज़रूरी खबरें, सीधे आपके Inbox में</p>
+            <ul class="newsletter-perks">
+              <li>✅ Breaking News Alerts</li>
+              <li>✅ Weekly Analysis</li>
+              <li>✅ Exclusive Interviews</li>
+              <li>✅ No Spam, Promise!</li>
+            </ul>
+          </div>
+          <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="आपका Email Address" class="newsletter-input" required/>
+            <button type="submit" class="newsletter-btn">Subscribe करें <i class="fas fa-arrow-right"></i></button>
+            <p class="newsletter-note">10 लाख+ पाठक पहले से जुड़े हैं 🎉</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="main-footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-box small">
+            <div class="logo-news">NEWS</div>
+            <div class="logo-room">R<span class="logo-o">O</span><span class="logo-o">O</span>M</div>
+          </div>
+        </div>
+        <p class="footer-tagline">"जनता का न्यूज़रूम, जनता की आवाज़"</p>
+        <p class="footer-desc">भारत और दुनिया की हर बड़ी खबर, सबसे तेज़ और सबसे भरोसेमंद अंदाज़ में।</p>
+        <div class="social-links">
+          <a href="#" class="social-btn youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn twitter" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn telegram" title="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="social-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#">🏛️ राजनीति</a></li>
+            <li><a href="#">🇮🇳 देश</a></li>
+            <li><a href="#">🌍 दुनिया</a></li>
+            <li><a href="#">💼 बिज़नेस</a></li>
+            <li><a href="#">💻 टेक्नोलॉजी</a></li>
+            <li><a href="#">🏏 खेल</a></li>
+            <li><a href="#">🎬 मनोरंजन</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Special</h4>
+          <ul>
+            <li><a href="#">✅ Fact Check</a></li>
+            <li><a href="#">🔍 Explainers</a></li>
+            <li><a href="#">✍️ Opinion</a></li>
+            <li><a href="#">🎥 Videos</a></li>
+            <li><a href="#">🎙️ Podcasts</a></li>
+            <li><a href="#">📍 Madhya Pradesh</a></li>
+            <li><a href="#">📚 Education</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Editorial Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Advertise With Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Download App</h4>
+          <div class="app-buttons">
+            <a href="#" class="app-btn"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#" class="app-btn"><i class="fab fa-apple"></i> App Store</a>
+          </div>
+          <h4 style="margin-top:1.5rem">Contact</h4>
+          <p class="footer-contact"><i class="fas fa-envelope"></i> news@thenewsroom.in</p>
+          <p class="footer-contact"><i class="fas fa-phone"></i> +91 98765 43210</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 THE NEWSROOM. सर्वाधिकार सुरक्षित। | जनता का न्यूज़रूम, जनता की आवाज़</p>
+        <p class="footer-disclaimer">Disclaimer: यह वेबसाइट केवल सूचना प्रदान करने के उद्देश्य से बनाई गई है।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="ऊपर जाएं">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== NOTIFICATION POPUP ===== -->
+  <div class="notification-popup" id="notifPopup">
+    <div class="notif-icon">🔔</div>
+    <div class="notif-text">
+      <strong>Breaking News Alerts चालू करें</strong>
+      <p>हर ज़रूरी खबर की instant notification पाएं</p>
+    </div>
+    <div class="notif-actions">
+      <button class="notif-allow" onclick="allowNotification()">Allow</button>
+      <button class="notif-deny" onclick="denyNotification()">No Thanks</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
